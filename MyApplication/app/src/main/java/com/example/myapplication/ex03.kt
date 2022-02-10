@@ -16,7 +16,7 @@ fun main() {
     }else{
         println("data <= 0")
         false
-    }
+
     println(result);*/
 
     var data: Any = 10;
