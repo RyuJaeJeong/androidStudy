@@ -18,4 +18,6 @@ data = null
 println("data = $data : ${data?.length?:-1}")
 
 //!! 일부러 널포인트 익셉션 유발함    
+
+
 }
