@@ -4,11 +4,96 @@
               android:layout_height="match_parent"
               android:orientation="vertical"
               android:gravity="center">
+
+
+    <!--
+    뷰의 크기를 지정하는 방법
+
+    수치 : px, dp등 단위를 수반한 절대 수치 입력
+    wrap_content : 자신의 컨텐츠를 화면에 출력 할 수 있는 적절한 크기
+    match_parent : 자기보다 상위 계체의 크기를 의미한다. linearLayout에 쓰면
+    기기 전체의 화면 크기나, 자기보다 상위 linearLayout 의 크기가된다.
+
+     -->
+
+    <!--
+        뷰의 간격설정 : margin, padding
+    -->
+
+    <!--
+     뷰의 표시여부를 설정하는 방법
+        visible : 뷰가 화면에 출력됨
+        invisible : 화면에 보이지는 않지만 자리는 차지함
+        gone : 자리조차 차지하지 않습니다.
+    -->
+
+    <!--
+
+    텍스트 뷰
+    android:text
+    android:textColor
+    android:textSize
+    android:textStyle - bold, italic, normal
+    android:autoLink  - web, phone, email
+    android:maxLines 특정 줄까지만 나오도록 해야 할 때
+    android:ellipsize 속성 - start, middle, end
+    start, middle 의 경우 singleLine="true" 일때만
+
+    -->
+
+    <!--
+
+   이미지 뷰
+   android:src="@drawable/image3"
+   android:maxWidth
+   android:maxHeight
+   android:adjustViewBounds
+   start, middle 의 경우 singleLine="true" 일때만
+   이미지 뷰의 크기와 실제 이미지의 크기는 다를 수 있다.
+   maxWidth, maxHeight 이미지 최대 크기를 제한함.
+
+
+    버튼, 체크박스, 라디오
+    <Button android:layout_width="" android:layout_height=""/>
+    <CheckBox android:layout_width="" android:layout_height=""/>
+    <RadioGroup android:layout_width="" android:layout_height="">
+        <RadioButton android:layout_width="" android:layout_height="" />
+        <RadioButton android:layout_width="" android:layout_height="" />
+        <RadioButton android:layout_width="" android:layout_height="" />
+    </RadioGroup>
+     -->
+
+    <!--
+
+     <EditText android:layout_width="" android:layout_height="" />
+     input type을 지정 할 수 있다.
+     none
+     text
+     textCapCharacters : 각 단어의 첫 글자 입력시 키보드가 자동으로 대문자 입력모드
+     textCapSentences : 각 문단의 첫 글자 입력시 키보드가 자동으로 대문자 입력모드
+     textMultiLine
+     textNoSuggestions
+     textUri
+     textEmailAddress
+     textPassword
+     textVisiblePassword
+     number
+     numberSignde
+     numberDecimal
+     numberPassword
+     phone
+
+     교재 166쪽 참조.
+
+     -->
+
+
     <TextView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"
             android:textStyle="bold"
-            android:text="Lake Louise" />
+            android:autoLink="web"
+            android:text="https://vibe.naver.com/today"/>
     <ImageView
             android:layout_width="wrap_content"
             android:layout_height="wrap_content"

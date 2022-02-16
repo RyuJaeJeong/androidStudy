@@ -9,11 +9,15 @@ import android.widget.ImageView
 import android.widget.LinearLayout
 import android.widget.TextView
 import androidx.core.content.ContextCompat
+import com.example.myapplication.databinding.ActivityMainBinding
 
 class MainActivity : AppCompatActivity() {
     override fun onCreate(savedInstanceState: Bundle?) {
         super.onCreate(savedInstanceState)
         setContentView(R.layout.activity_main)
+        //뷰바인딩 바인딩 객체 획득
+        val binding = ActivityMainBinding.inflate(layoutInflater)
+        setContentView(binding.root)
         /*
 
         val name = TextView(this).apply {
@@ -39,7 +43,6 @@ class MainActivity : AppCompatActivity() {
             addView(image, WRAP_CONTENT, WRAP_CONTENT)
             addView(address, WRAP_CONTENT, WRAP_CONTENT)
         }*/
-
 
         //setContentView(layout)
 
