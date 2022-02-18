@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<project version="4">
+  <component name="DesignSurface">
+    <option name="filePathToZoomLevelMap">
+      <map>
+        <entry key="..\:/androidStudy/MyApplication/Ch8/Ch8_3/src/main/res/drawable/round_button.xml" value="0.15555555555555556" />
+        <entry key="..\:/androidStudy/MyApplication/Ch8/Ch8_3/src/main/res/layout/activity_main.xml" value="0.16875" />
+        <entry key="..\:/androidStudy/MyApplication/Ch8/ch8_1/src/main/res/layout/activity_main.xml" value="0.36302083333333335" />
+      </map>
+    </option>
+  </component>
+  <component name="FrameworkDetectionExcludesConfiguration">
+    <file type="web" url="file://$PROJECT_DIR$" />
+  </component>
+  <component name="ProjectRootManager" version="2" languageLevel="JDK_11" default="true" project-jdk-name="11" project-jdk-type="JavaSDK">
+    <output url="file://$PROJECT_DIR$/build/classes" />
+  </component>
+  <component name="ProjectType">
+    <option name="id" value="Android" />
+  </component>
+</project>
