@@ -32,7 +32,7 @@ class MainActivity : AppCompatActivity() {
         super.onCreate(savedInstanceState)
         val binding = ActivityMainBinding.inflate(layoutInflater)
         setContentView(binding.root)
-        setSupportActionBar(binding.toolbar)
+        setSupportActionBar(binding.toolbar)    //툴바 바인딩
         //ActionBarDrawerToggle버튼 적용
         toggle = ActionBarDrawerToggle(this, binding.drawer, R.string.drawer_opened, R.string.drawer_closed)
         supportActionBar?.setDisplayHomeAsUpEnabled(true)
@@ -41,7 +41,8 @@ class MainActivity : AppCompatActivity() {
         val adapter = MyFragmentPagerAdapter(this)
         binding.viewpager.adapter = adapter
     }
-
+    
+    //정적메뉴
     override fun onCreateOptionsMenu(menu: Menu): Boolean {
         val inflater = menuInflater
         inflater.inflate(R.menu.menu_main, menu)
@@ -63,6 +64,7 @@ class MainActivity : AppCompatActivity() {
         })
         return true
     }
+    //onPreParedOPTIONMENU 동적메뉴를 생성할때 호출
 
     override fun onOptionsItemSelected(item: MenuItem): Boolean {
         //이벤트가 토글 버튼에서 발생하ㅏ면
