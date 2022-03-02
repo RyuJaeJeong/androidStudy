@@ -7,41 +7,51 @@ import android.graphics.Color
 import android.graphics.Rect
 import android.graphics.drawable.Drawable
 import android.os.Bundle
+import android.util.Log
 import androidx.fragment.app.Fragment
 import android.view.LayoutInflater
 import android.view.View
 import android.view.ViewGroup
 import androidx.core.content.res.ResourcesCompat
 import androidx.core.view.ViewCompat
+import androidx.recyclerview.widget.GridLayoutManager
 import androidx.recyclerview.widget.LinearLayoutManager
 import androidx.recyclerview.widget.RecyclerView
 import com.example.ch11_jetpack.databinding.FragmentOneBinding
 import com.example.ch11_jetpack.databinding.FragmentTwoBinding
 import com.example.ch11_jetpack.databinding.ItemRecyclerviewBinding
 
-//항목뷰를 가지는 역활
+//항목뷰 객체를 가지는 역활을 하는 뷰 홀더 준비
 class MyViewHolder(val binding: ItemRecyclerviewBinding) : RecyclerView.ViewHolder(binding.root)
 
 //항목 구성자, 어댑터
 class MyAdapter(val datas: MutableList<String>): RecyclerView.Adapter<RecyclerView.ViewHolder>() {
     
     //항목 개수를 판단하기 위해 자동 호출
-    override fun getItemCount(): Int {
-        return datas.size
-    }
+    override fun getItemCount(): Int = datas.size
+
     //뷰홀더를 호출하기 위해 호출
     override fun onCreateViewHolder(parent: ViewGroup, viewType: Int): RecyclerView.ViewHolder =MyViewHolder(
         ItemRecyclerviewBinding.inflate(LayoutInflater.from(parent.context), parent, false))
+
     //각 항목을 구성하기 위해 호출
     override fun onBindViewHolder(holder: RecyclerView.ViewHolder, position: Int) {
-       val binding=(holder as MyViewHolder).binding
+        Log.d("financeRyu", "onBindViewHolder : $position")
+        val binding=(holder as MyViewHolder).binding
        //뷰에 데이터 출력
        binding.itemData.text= datas[position]
+       //뷰에 이벤트 추가
+       binding.itemRoot.setOnClickListener{
+           Log.d("financeRyu", "item root click : $position")
+           //항목을 구성하는 데이터에 새로운 데이터를 추가
+           datas.add("new Item ${position + 11}")
+           notifyDataSetChanged()
+       }
     }
 }
 
 class MyDecoration(val context: Context): RecyclerView.ItemDecoration() {
-    //모든 항목이 출력된 후 호출
+    //항목이 배치되기 전에 호출됨 onDraw
     override fun onDraw(c: Canvas, parent: RecyclerView, state: RecyclerView.State) {
         super.onDraw(c, parent, state)
 
@@ -99,6 +109,11 @@ class OneFragment : Fragment() {
         
         //리사이클러 뷰에 LayoutManager, Adapter, ItemDecoration적용
         val layoutManager = LinearLayoutManager(activity)
+
+        //그리드 레이아웃으로 배치함
+        //val layoutManager = GridLayoutManager(activity, 4)
+        //가로로 배치하려 할때.
+        //layoutManager.orientation = LinearLayoutManager.HORIZONTAL
         binding.recyclerView.layoutManager=layoutManager
         val adapter = MyAdapter(datas)
         binding.recyclerView.adapter=adapter
