@@ -1,5 +1,9 @@
 <?xml version="1.0" encoding="utf-8"?>
+<<<<<<< .merge_file_a09516
+<!-- 리사이클러 뷰 xml파일 -->
+=======
 <!-- 리사이클러 뷰를 레이아웃 XML에 등록해야함  -->
+>>>>>>> .merge_file_a16736
 <androidx.recyclerview.widget.RecyclerView
     xmlns:android="http://schemas.android.com/apk/res/android"
     android:id="@+id/recyclerView"
