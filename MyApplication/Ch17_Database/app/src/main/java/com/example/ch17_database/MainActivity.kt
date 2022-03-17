@@ -29,9 +29,6 @@ class MainActivity : AppCompatActivity() {
             ActivityResultContracts.StartActivityForResult())
         {
             it.data!!.getStringExtra("result")?.let {
-                Log.d("financeRyu", "requestLauncher do")
-                Log.d("financeRyu", "$datas")
-                Log.d("financeRyu", "$it")
                 datas?.add(it)
                 adapter.notifyDataSetChanged()
             }
@@ -48,9 +45,6 @@ class MainActivity : AppCompatActivity() {
             }
         }
         db.close()
-
-        println(datas!![0])
-
         val layoutManager = LinearLayoutManager(this)
         binding.mainRecyclerView.layoutManager=layoutManager
         adapter=MyAdapter(datas)

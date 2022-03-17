@@ -5,7 +5,6 @@
         android:layout_width="match_parent"
         android:layout_height="match_parent"
         android:fitsSystemWindows="true">
-   <!-- 첫번째 태그에 해당하는 화면이 알아서 나오고 -->
   <LinearLayout
           android:layout_width="match_parent"
           android:layout_height="match_parent"
@@ -20,7 +19,6 @@
               android:layout_width="match_parent"
               android:layout_height="match_parent" />
   </LinearLayout>
-    <!-- 사용자가 화면끝을 밀면 두번째 태그에 해당하는 화면이 나타남 -->
   <TextView
           android:layout_width="300dp"
           android:layout_height="match_parent"

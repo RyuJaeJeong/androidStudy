@@ -1,11 +1,26 @@
 <resources xmlns:tools="http://schemas.android.com/tools">
+<<<<<<< .merge_file_a09180
+    <!-- Base application theme. -->
+    <!-- NoActionBar를 상속받으면 액션바가 나오지 않습니다. -->
+    <style name="Theme.Ch11_Jetpack" parent="Theme.MaterialComponents.DayNight.NoActionBar">
+        <!-- Primary brand color. -->
+
+        <!-- 앱 헤더랑 버튼 색상 -->
+=======
     <!-- Base application theme. 테마를 선언할때 NoActionBar를 선언하면 액션바가 나오지 않는다 -->
     <style name="Theme.Ch11_Jetpack" parent="Theme.MaterialComponents.DayNight.NoActionBar">
         <!-- 주색상 - 액션바와 버튼색상  -->
+>>>>>>> .merge_file_a21064
         <item name="colorPrimary">#0078FF</item>
         <item name="colorPrimaryVariant">#0000FF</item>
+        <!-- 버튼 색상 -->
         <item name="colorOnPrimary">@color/white</item>
+<<<<<<< .merge_file_a09180
+        <!-- Secondary brand color. -->
+        <!-- 링크, 체크박스, 스위치, 플로팅 액션 버튼 등 -->
+=======
         <!-- 부색상 - 활성상태를 의미함, 텍스트뷰의 링크, 라디오버튼 체크 되 있을때, 스위치 켬상태 -->
+>>>>>>> .merge_file_a21064
         <item name="colorSecondary">@color/teal_200</item>
         <item name="colorSecondaryVariant">@color/teal_700</item>
         <item name="colorOnSecondary">@color/black</item>

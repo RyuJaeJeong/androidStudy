@@ -1,5 +1,4 @@
 <?xml version="1.0" encoding="utf-8"?>
-<!-- 리사이클러뷰 목록에 표시할 항목을 디자인한 레이아웃 XML파일 -->
 <LinearLayout
     android:id="@+id/item_root"
     xmlns:android="http://schemas.android.com/apk/res/android"
@@ -8,7 +7,7 @@
     android:orientation="horizontal"
     android:padding="16dp"
     android:layout_margin="8dp">
-
+    <!-- 리사이클러 뷰 바인딩 할 데이터 -->
     <TextView
         android:id="@+id/item_data"
         android:layout_width="0dp"
